@@ -1,4 +1,303 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 29 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Astable Multivibrator"
+Date "2020-07-14"
+Rev "V0R0"
+Comp "Eureka Labs"
+Comment1 ""
+Comment2 ""
+Comment3 "EurekaGuy"
+Comment4 "Designed By:"
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5F0CD6A3
+P 7475 3700
+F 0 "A1" H 8000 2725 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 8000 2650 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 7625 2750 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 7475 2700 50  0001 C CNN
+	1    7475 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Timer:NE555 U1
+U 1 1 5F0D0420
+P 4800 3825
+F 0 "U1" H 4925 4250 50  0000 C CNN
+F 1 "NE555" H 4975 4175 50  0000 C CNN
+F 2 "" H 4800 3825 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 4800 3825 50  0001 C CNN
+	1    4800 3825
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 5F0D1AC0
+P 5550 4625
+F 0 "C2" H 5668 4671 50  0000 L CNN
+F 1 "CP" H 5668 4580 50  0000 L CNN
+F 2 "" H 5588 4475 50  0001 C CNN
+F 3 "~" H 5550 4625 50  0001 C CNN
+	1    5550 4625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5F0D2015
+P 5875 3475
+F 0 "R4" V 5668 3475 50  0000 C CNN
+F 1 "R" V 5759 3475 50  0000 C CNN
+F 2 "" V 5805 3475 50  0001 C CNN
+F 3 "~" H 5875 3475 50  0001 C CNN
+	1    5875 3475
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5F0D2582
+P 5525 3475
+F 0 "D1" H 5518 3220 50  0000 C CNN
+F 1 "LED" H 5518 3311 50  0000 C CNN
+F 2 "" H 5525 3475 50  0001 C CNN
+F 3 "~" H 5525 3475 50  0001 C CNN
+	1    5525 3475
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5F0D29D6
+P 5750 3825
+F 0 "R3" V 5543 3825 50  0000 C CNN
+F 1 "R" V 5634 3825 50  0000 C CNN
+F 2 "" V 5680 3825 50  0001 C CNN
+F 3 "~" H 5750 3825 50  0001 C CNN
+	1    5750 3825
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F0D2B99
+P 5550 4250
+F 0 "R2" H 5620 4296 50  0000 L CNN
+F 1 "R" H 5620 4205 50  0000 L CNN
+F 2 "" V 5480 4250 50  0001 C CNN
+F 3 "~" H 5550 4250 50  0001 C CNN
+	1    5550 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3825 5550 3825
+Wire Wire Line
+	5300 4025 5425 4025
+Wire Wire Line
+	5550 4025 5550 4100
+Wire Wire Line
+	5550 4025 5550 3825
+Connection ~ 5550 4025
+Connection ~ 5550 3825
+Wire Wire Line
+	5550 3825 5600 3825
+Wire Wire Line
+	4300 3625 4000 3625
+Wire Wire Line
+	4000 3625 4000 4600
+Wire Wire Line
+	4000 4600 5425 4600
+Wire Wire Line
+	5425 4600 5425 4025
+Connection ~ 5425 4025
+Wire Wire Line
+	5425 4025 5550 4025
+$Comp
+L Device:C C1
+U 1 1 5F0E632D
+P 4125 4050
+F 0 "C1" H 4150 4150 50  0000 L CNN
+F 1 "C" H 4150 3950 50  0000 L CNN
+F 2 "" H 4163 3900 50  0001 C CNN
+F 3 "~" H 4125 4050 50  0001 C CNN
+	1    4125 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F0E6C0C
+P 4275 4325
+F 0 "R1" H 4275 4475 50  0000 L CNN
+F 1 "R" H 4325 4400 50  0000 L CNN
+F 2 "" V 4205 4325 50  0001 C CNN
+F 3 "~" H 4275 4325 50  0001 C CNN
+	1    4275 4325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3825 4125 3825
+Wire Wire Line
+	4125 3825 4125 3900
+Wire Wire Line
+	4300 4025 4275 4025
+Wire Wire Line
+	4275 4025 4275 4175
+Wire Wire Line
+	5550 4475 5550 4400
+Wire Wire Line
+	5375 3475 5325 3475
+Wire Wire Line
+	5325 3475 5325 3625
+Wire Wire Line
+	5325 3625 5300 3625
+Wire Wire Line
+	5675 3475 5725 3475
+$Comp
+L power:+5V #PWR0101
+U 1 1 5F0EEA1A
+P 4800 3325
+F 0 "#PWR0101" H 4800 3175 50  0001 C CNN
+F 1 "+5V" H 4815 3498 50  0000 C CNN
+F 2 "" H 4800 3325 50  0001 C CNN
+F 3 "" H 4800 3325 50  0001 C CNN
+	1    4800 3325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3325 4800 3425
+$Comp
+L power:GND #PWR0102
+U 1 1 5F0F06AC
+P 6100 3525
+F 0 "#PWR0102" H 6100 3275 50  0001 C CNN
+F 1 "GND" H 6105 3352 50  0000 C CNN
+F 2 "" H 6100 3525 50  0001 C CNN
+F 3 "" H 6100 3525 50  0001 C CNN
+	1    6100 3525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3525 6100 3475
+Wire Wire Line
+	6100 3475 6025 3475
+$Comp
+L power:+5V #PWR0103
+U 1 1 5F0F10CB
+P 5925 3775
+F 0 "#PWR0103" H 5925 3625 50  0001 C CNN
+F 1 "+5V" H 5940 3948 50  0000 C CNN
+F 2 "" H 5925 3775 50  0001 C CNN
+F 3 "" H 5925 3775 50  0001 C CNN
+	1    5925 3775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5925 3775 5925 3825
+Wire Wire Line
+	5925 3825 5900 3825
+$Comp
+L power:GND #PWR0104
+U 1 1 5F0F1F2D
+P 5550 4825
+F 0 "#PWR0104" H 5550 4575 50  0001 C CNN
+F 1 "GND" H 5555 4652 50  0000 C CNN
+F 2 "" H 5550 4825 50  0001 C CNN
+F 3 "" H 5550 4825 50  0001 C CNN
+	1    5550 4825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 4825 5550 4775
+$Comp
+L power:+5V #PWR0105
+U 1 1 5F0F3D55
+P 4400 4525
+F 0 "#PWR0105" H 4400 4375 50  0001 C CNN
+F 1 "+5V" H 4415 4698 50  0000 C CNN
+F 2 "" H 4400 4525 50  0001 C CNN
+F 3 "" H 4400 4525 50  0001 C CNN
+	1    4400 4525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5F0F4D8A
+P 4800 4275
+F 0 "#PWR0106" H 4800 4025 50  0001 C CNN
+F 1 "GND" H 4805 4102 50  0000 C CNN
+F 2 "" H 4800 4275 50  0001 C CNN
+F 3 "" H 4800 4275 50  0001 C CNN
+	1    4800 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5F0F5166
+P 4125 4275
+F 0 "#PWR0107" H 4125 4025 50  0001 C CNN
+F 1 "GND" H 4130 4102 50  0000 C CNN
+F 2 "" H 4125 4275 50  0001 C CNN
+F 3 "" H 4125 4275 50  0001 C CNN
+	1    4125 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4275 4575 4400 4575
+Wire Wire Line
+	4400 4575 4400 4525
+Wire Wire Line
+	4275 4475 4275 4575
+Wire Wire Line
+	4800 4225 4800 4275
+Wire Wire Line
+	4125 4200 4125 4275
+Wire Wire Line
+	6975 3500 6425 3500
+Wire Wire Line
+	6425 3500 6425 3150
+Wire Wire Line
+	6425 3150 5325 3150
+Wire Wire Line
+	5325 3150 5325 3475
+Connection ~ 5325 3475
+$Comp
+L power:+5V #PWR0108
+U 1 1 5F10FB48
+P 7675 2625
+F 0 "#PWR0108" H 7675 2475 50  0001 C CNN
+F 1 "+5V" H 7690 2798 50  0000 C CNN
+F 2 "" H 7675 2625 50  0001 C CNN
+F 3 "" H 7675 2625 50  0001 C CNN
+	1    7675 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5F110237
+P 7525 4875
+F 0 "#PWR0109" H 7525 4625 50  0001 C CNN
+F 1 "GND" H 7530 4702 50  0000 C CNN
+F 2 "" H 7525 4875 50  0001 C CNN
+F 3 "" H 7525 4875 50  0001 C CNN
+	1    7525 4875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7475 4700 7475 4750
+Wire Wire Line
+	7475 4750 7525 4750
+Wire Wire Line
+	7575 4750 7575 4700
+Wire Wire Line
+	7525 4750 7525 4875
+Connection ~ 7525 4750
+Wire Wire Line
+	7525 4750 7575 4750
+Wire Wire Line
+	7675 2625 7675 2700
+Text Notes 4300 2825 0    50   ~ 0
+Astable Multivibrator
+Text Notes 7100 2300 0    50   ~ 0
+Measuring system
 $EndSCHEMATC
