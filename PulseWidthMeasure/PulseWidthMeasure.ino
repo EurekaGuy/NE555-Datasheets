@@ -1,3 +1,13 @@
+/******************************************************************************
+ * Author: EurekaGuy
+ * 
+ * This code is an example support to the related 
+ * video on the topic of DATASHEETS.
+ * 
+ * Youtube Video:
+ * YouTube Channel: https://www.youtube.com/channel/UCu7SAylZELIQkBLu6gLazLA
+******************************************************************************/
+
 #define pulsePin 7
 
 void setup() {
